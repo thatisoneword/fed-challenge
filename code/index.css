@@ -20,29 +20,118 @@ h5 {
   font-family: "Merriweather", Times New Roman, serif;
 }
 
-
-.button {
-
+.ui.primary.button {
+  background-color: #4daf7c;
+  font-size: 1em;
+  padding: 1.25em 1.99em;
+  box-shadow: 0 -1px 0 0 rgba(0,0,0,.05) inset,0 0 0 1px rgba(0,0,0,.13) inset,0 1px 3px rgba(0,0,0,.15);
+  background-image: linear-gradient(rgba(255,255,255,.15),rgba(0,0,0,.08));
 }
-
-
+.ui.primary.button:hover {
+  background-color: #09b159;
+  text-shadow: 0 1px 1px rgba(0,0,0,.2);
+}
 
 /*******************************
               Page
 *******************************/
 
 .hero {
-
+  background-color: #dff1e8;
 }
-
+.hero .container {
+  padding: 3.3em 0 4em;
+}
+.hero h1 {
+  font-size: 2.5em;
+  font-weight: normal;
+  width: 10em;
+  margin: 1.4em 0 1em;
+}
+.hero p {
+  width: 20em;
+  font-size: 1.4em;
+  color: #858585;
+  margin-bottom: 2em;
+  line-height: 1.5em;
+}
+.hero-graphic {
+  margin: 4.5em 0 2.4em;
+}
 .page {
-
+  margin-top: 9em;
 }
-
+.page .row {
+  margin-bottom: 3.3em;
+}
+.ui.cards .card {
+  width: 340px;
+  box-shadow: 0 10px 35px rgba(50,50,93,.1), 0 5px 15px rgba(0,0,0,.07);
+}
+.ui.cards .card>.image {
+  height: 220px;
+  background-color: #242424;
+  background-image: url(images/card-logo-mark.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.ui.cards .card .content {
+  padding: 1.62em 2.3em 1.6em 2.2em;
+}
+.ui.cards .card>.content>.header:not(.ui) {
+  font-weight: 100;
+  font-size: 1.6em;
+  margin-bottom:1.2em;
+  line-height: 2em;
+}
+.ui.cards .card .description {
+  color: #555;
+  font-weight: normal;
+  font-size: .8em;
+  line-height: 1.5em;
+  padding-bottom: 1.5em;
+}
+.cta-container {
+  background-image: url(images/cta-bg.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100% auto;
+  margin-top: 4.6em;
+}
+.cta-container a {
+  color: #339365;
+}
+.cta-container a:hover {
+  color: #09b159;
+}
+.cta-container .grid .row {
+  margin-bottom: 7em;
+}
+.cta-container .column p {
+  width: 11em;
+  color: #7c7c7c;
+  font-size: 1.9em;
+  text-align: center;
+  margin: auto;
+  padding: 1em 0;
+}
 .footer {
-
+  background-color: #202327;
+  color: #646464;
+  font-size: .8em;
+  padding: 1.2em 0;
 }
-
+.footer .container {
+  position: relative;
+}
+.footer img {
+  margin-top: 5px;
+}
+.footer .copyright {
+  position: absolute;
+  left: 85px;
+  top: 6px;
+}
 
 /*******************************
          Responsive
@@ -50,16 +139,37 @@ h5 {
 
 /* Small Monitor */
 @media only screen and (min-width: 1025px) and (max-width: 1199px) {
-
-
+  .ui.cards .card {
+    width: 300px;
+  }
 }
-
 
 /* Tablet */
 @media screen and (max-width: 1024px) {
-
+  .ui.cards .card {
+    width: 240px;
+  }
+  .hero p {
+    width: 18em;
+  }
 }
 
 /* Mobile */
 @media only screen and (max-width: 767px) {
+  .ui.cards .card {
+    width: 340px;
+    margin: auto;
+  }
+  .cta-container .column {
+    width: 12em;
+  }
+  .center-small {
+    text-align: center;
+  }
+  .hero p {
+    width: 17em;
+  }
+  .hero-graphic {
+    width: 95%
+  }
 }
